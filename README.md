@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides resources and scripts for constructing a **monosemy-targeted corpus in Mandarin Chinese** from social media texts. The corpus is designed to support research on **unrecorded word sense detection**, **word sense induction**, and **lexical semantic change**.
+This repository provides resources and scripts for constructing a **monosemy-targeted corpus in Mandarin Chinese** from social media texts. The corpus is designed to support the research on [unrecorded word sense detection](https://github.com/essilien/Nonrecorded_Sense_Detection).
 
 The dataset is built from posts on **Weibo**, a major Chinese microblogging platform where new linguistic usages frequently emerge. By focusing on words that are **monosemous in standard Chinese dictionaries**, the corpus enables the identification of contexts that may reflect **novel semantic extensions not yet recorded in lexicographic resources**.
 
