@@ -8,17 +8,9 @@ The dataset is built from posts on **Weibo**, a major Chinese microblogging plat
 
 ---
 
-## Motivation
-
-Many new meanings of existing words first appear in informal online discourse, especially on social media platforms. However, these emerging senses often remain unrecorded in dictionaries for a long time.
-
-To facilitate the discovery of such meanings, this project focuses on **words that are lexicographically monosemous**. In principle, the contexts of such words should represent a single semantic cluster corresponding to the recorded dictionary sense. If additional clusters appear in real usage, they may indicate the presence of **previously unrecorded word senses**.
-
-The corpus therefore provides a structured dataset for studying **semantic innovation in Mandarin Chinese**.
-
----
-
 ## Data Source
+
+All monosemous words are collected from **Baidu Dictionary**,one of the largest Chinese online dictionaries. The first 30 words are manually validated and the remaining 70 words are randomly selected.
 
 All usage examples are collected from **Weibo**, one of the largest Chinese social media platforms.
 
@@ -30,20 +22,6 @@ Weibo posts are particularly suitable for this task because they contain:
 - large volumes of real-world usage data
 
 Each collected post is treated as a usage context of the target word.
-
----
-
-## Target Word Selection
-
-The corpus focuses on **monosemous words**, defined here as words that have **only one sense listed in standard Chinese dictionaries**.
-
-Target words are selected according to the following criteria:
-
-1. The word has a single sense in lexicographic resources.
-2. The word appears frequently enough in social media to provide sufficient usage contexts.
-3. The word shows potential semantic extension in online discourse.
-
-This strategy reduces semantic ambiguity and makes **new sense detection more reliable**.
 
 ---
 
@@ -137,39 +115,6 @@ The dataset may include additional fields used during preprocessing and filterin
 - `keep_for_analysis`
 
 These fields are primarily used for **data cleaning and corpus construction** and may not be required for downstream experiments.
-
-## Cleaning Script
-
-The repository provides a cleaning script to remove social-media noise.
-
-Example usage:
-
-    python scripts/data_cleaning.py data/raw_weibo_corpus.json data/weibo_usage_corpus_cleaned.json
-
-The script performs:
-
-- hashtag removal
-- mention removal
-- URL filtering
-- multimedia placeholder removal
-- text normalization
-
----
-
-## Synthetic Anchor Generation
-
-Anchor sentences representing dictionary senses can be generated with:
-
-    python scripts/generate_anchors.py
-
-Example anchor:
-
-    target_word: 厨子
-    anchor_context: 这个厨子做菜非常拿手。
-
-These anchors act as **semantic references** in later clustering-based sense discovery.
-
----
 
 ## Intended Use
 
