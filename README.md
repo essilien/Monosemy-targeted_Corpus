@@ -100,7 +100,7 @@ During later semantic clustering:
 Each usage instance is stored as a JSON object.
 
 Example:
-
+```json
 {
   "usage_id": "厨子_28",
   "target_word": "厨子",
@@ -109,7 +109,7 @@ Example:
   "right_context": "",
   "source_platform": "Weibo"
 }
-
+```
 ### Core Fields
 
 | Field | Description |
